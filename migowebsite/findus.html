@@ -1,0 +1,106 @@
+<html>
+    <head>
+        <title>Migo Website</title>
+        <style>
+            .table{
+                border:3px dotted red;
+                margin-bottom: 30px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="multiplication__table"></div>
+        <form name="contact" action="test.php" method="POST" >
+            <table>
+                <tr>
+                    <td>Fullname</td>
+                    <td><input name="fullname" type="text" class="number"></td>
+                </tr>
+                <tr>
+                    <td>Email Address</td>
+                    <td><input name="email" type="text"></td>
+                </tr>
+                <tr>
+                    <td>Phone Number</td>
+                    <td><input name="phone" type="text"></td>
+                </tr>
+                <tr>
+                    <td>Gender</td>
+                    <td>
+                        <input name="gender" type="radio" value="male" checked> Male
+                        <input name="gender" type="radio" value="female"> Female
+                        <input name="gender" type="radio" value="others"> Others
+                    </td>
+                </tr>
+                <tr>
+                    <td>Should we contact you by phone</td>
+                    <td>
+                        <select name="contact_by_phone">
+                            <option value="">--Select--</option>
+                            <option value="y">Yes</option>
+                            <option value="n">No</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Contact Address</td>
+                    <td><textarea name="address"></textarea></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>
+                        <input name="submit" value="Submit" type="submit">
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <button class="multiply">Multiplcation table </button>
+
+        
+
+        <script>
+            //innerhtml
+            //console.log
+            //document.write
+           /*  f = ['Hello', 3, 8, 'World']
+            let a, b, c = 500;
+            a = 400;
+            for(j = 0; j < f.length; j++){
+                let test = '<table class="table"><tr><td>Here I am</td>'
+                    test += '<td>Another data</td></tr></table>'
+               tester = document.querySelector('form')
+               tester.classList.remove('form') //= 'table'
+               //console.log(tester)
+                
+                document.write(test)
+            } */
+
+
+        
+            //c = a + b;
+           /*  if( a !== b ){
+                document.write('The same value')
+            } else {
+                document.write('Not the same value')
+            } */
+            //document.addEventListener('DOMContentLoaded', function(){
+                //document.write(c)
+            //})
+
+            document.querySelector('button').addEventListener('click', function(){
+                let list = document.querySelector('.multiplication__table'),
+                inputNumber = document.querySelector('.number'),
+                temp = '';
+            
+                for(j=1; j <= 12; j++){
+                    c = inputNumber.value
+                    b = c * j;
+                    temp += j + ' * ' +  c + ' = ' +  b + "<br>"; 
+                }
+
+                list.innerHTML = temp
+            })
+            
+        </script>
+    </body>
+</html>
