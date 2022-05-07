@@ -2,8 +2,8 @@
 
 function send_email($email, $subject, $msg) {
 
-  $api_key= "key-ad853d626bd5ad64f2222353d5890eed";/* Api Key got from https://mailgun.com/cp/my_account */
-  $domain = "mg.lounge45.com";/* Domain Name you given to Mailgun */
+  $api_key= "";/* Api Key got from https://mailgun.com/cp/my_account */
+  $domain = "";/* Domain Name you given to Mailgun */
 
   $ch = curl_init();
   curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
@@ -14,7 +14,7 @@ function send_email($email, $subject, $msg) {
   curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
   curl_setopt($ch, CURLOPT_URL, 'https://api.mailgun.net/v3/'.$domain.'/messages');
   curl_setopt($ch, CURLOPT_POSTFIELDS, array(
-      'from' => 'Jodi <jodi@lounge45.com>',
+      'from' => 'Jodi <jodi@kuikuik.com>',
       'to' => $email,
       'subject' => $subject,
       'html' => $msg
