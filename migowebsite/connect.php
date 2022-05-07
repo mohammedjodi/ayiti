@@ -1,9 +1,9 @@
 <?php
 
-    $server = 'localhost';
-    $username = 'root';
-    $password = 'cynosure';
-    $db = 'AYITITEST';
+    $server = '';
+    $username = '';
+    $password = '';
+    $db = '';
 
     $blessing = mysqli_connect($server, $username, $password, $db);
     
