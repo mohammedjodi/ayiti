@@ -15,6 +15,7 @@
                 echo '<td><strong>Lastname</strong></td>';
                 echo '<td><strong>Email Address</strong></td>';
                 echo '<td><strong>Date Created</strong></td>';
+                echo '<td><strong>Action</strong></td>';
             echo '</tr>';
         while ($row = mysqli_fetch_assoc($student_details_result)) {
             echo '<tr>';
@@ -22,6 +23,7 @@
                 echo '<td>' . $row['lastname'].'</td>';
                 echo '<td>' . $row['email_address'].'</td>';
                 echo '<td>' . $row['date_created'].'</td>';
+                echo '<td><a href="phpmysqlupdate.php?update_id=' . $row['id']  . '">Update</a> | Delete</td>';
             echo '</tr>';
         }
         echo '</table>';
