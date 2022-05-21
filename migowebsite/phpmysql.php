@@ -3,7 +3,7 @@
     include('connect.php');
     include('nav.php');
 
-    $student_details_sql = "SELECT * from student_details WHERE status='active' ORDER BY `id` DESC"; 
+    $student_details_sql = "SELECT * from student_details ORDER BY `id` DESC"; 
     $student_details_result = mysqli_query($blessing, $student_details_sql);
 
     if (mysqli_num_rows($student_details_result) > 0) {
