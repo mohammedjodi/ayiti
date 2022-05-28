@@ -27,10 +27,11 @@
 
                 $_SESSION['fname'] = $fname;
                 $_SESSION['lname'] = $lname;
-
-                header('Location: welcome.php');
-                exit;
             }
+
+            header('Location: welcome.php');
+            exit;
+            
         } else {
             $error_msg = 'Invalid Email or Password';
             $does_not_have_error = false;    
